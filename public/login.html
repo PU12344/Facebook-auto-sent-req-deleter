@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./assets/mystyle.css">
+
+</head>
+<body>
+
+<form action="/popup.html" method="GET" id="pubali">
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field mail" type="text" placeholder="Gmail" name="gmail" required>
+    <!-- Adding a div where the error message will be printed if the user enters wrong email -->
+    <div class="error-msg1"></div>
+  </div>
+  
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field firstpassword" type="password" placeholder="Password must be minimum 4 characters" name="password" minlength="4">
+  </div>
+  <!-- Adding a div where the error message will be printed if the user enters wrong password -->
+  <div class="error-msg2"></div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field secondpassword" type="password" placeholder="Re-Enter-Password" name="password2">
+  </div>
+  <!-- Adding a div where the error message will be printed if the passwords don't match -->
+  <div class="error-msg3"></div>
+
+  <button type="submit" id="login" class="btn">log in</button>
+</form>
+<script src="/src/login.js"></script>
+</body>
+</html>

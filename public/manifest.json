@@ -1,0 +1,36 @@
+{
+    "name":"Pubali Auto Friend Request Deleter ",
+    "version": "1.0.0",
+    "description": "This is my facebook extension" ,
+    "manifest_version": 2,
+    "permissions": [ "tabs",
+        "storage",  
+        "notifications",
+        "https://www.facebook.com/"
+    ],
+
+    "background": {
+        "scripts":["js/background.js"],
+        "persistent": false
+    },
+
+    "browser_action": 
+    {
+        "default_popup":"login.html"
+    },
+
+    "icons": {
+           "128": "images/icon.png"      
+    },
+    
+   "content_scripts": [
+       {
+           "matches": ["*://*.facebook.com/*",
+             "*://facebook.com/*"
+        ],
+           "js": ["js/content.js"       
+        ]
+       }
+   ]
+
+}
